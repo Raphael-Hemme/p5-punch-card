@@ -38,6 +38,9 @@ function setup() {
   for(el of dotArr) {
     circle(el.xPos, el.yPos, 10)
   }
+
+  const saveFileName = 'punchCardPattern' + '-' + randH.toString() + '-' + sDots.toString() + '-' + randLDots.toString()
+  saveCanvas(saveFileName, 'png');
 }
 
 function draw() {
