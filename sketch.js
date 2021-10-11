@@ -19,7 +19,7 @@ function setup() {
   colorMode(HSL)
   background(randH, sBg, randLBg);
 
-  for (let i = 20; i < 730; i+= 20) {
+  for (let i = 20; i < 740; i+= 20) {
     for (let j = 20; j < height; j+= 20) {
       if(Math.random() > 0.7) {
         dotArr.push({
@@ -37,15 +37,15 @@ function setup() {
 
   fill(randH, sBg, randLBg);
   noStroke();
-  rect(740, 0, 50, 300)
+  rect(745, 0, 50, 300)
 
   fill(randH, sDots, randLDots);
   noStroke();
-  rect(740, 0, 1, 300)
+  rect(751, 0, 1, 300)
 
   fill(randH, sDots, randLDots);
   noStroke();
-  rect(745, 0, 2, 300)
+  rect(747, 0, 2, 300)
 
   fill(randH, sDots, randLDots);
   noStroke();
@@ -54,7 +54,7 @@ function setup() {
    translate(850,50);
   rotate( radians(90) );
   fill(randH, sDots, randLDots);
-  text(colorText, 10, 90);
+  text(colorText, 0, 90);
   /*text(dateStr, 20, 90); */
 }
 
