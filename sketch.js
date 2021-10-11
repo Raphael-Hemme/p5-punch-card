@@ -11,11 +11,15 @@ function setup() {
   const randLBg = Math.floor(random(10, 90))
   const randLDots = randLBg < 50 ? Math.floor(random(50, 80)) : Math.floor(random(20, 50))
 
+  const colorText = randH.toString() + '-' + sDots.toString() + '-' + randLDots.toString()
+  let dateStr = new Date;
+  dateStr.toString()
+  saveFileName = 'punchCardPattern' + '-' + colorText;
+  
   colorMode(HSL)
-
   background(randH, sBg, randLBg);
 
-  for (let i = 20; i < width - 10; i+= 20) {
+  for (let i = 20; i < 730; i+= 20) {
     for (let j = 20; j < height; j+= 20) {
       if(Math.random() > 0.7) {
         dotArr.push({
@@ -30,7 +34,28 @@ function setup() {
   for(el of dotArr) {
     circle(el.xPos, el.yPos, 10)
   }
-  saveFileName = 'punchCardPattern' + '-' + randH.toString() + '-' + sDots.toString() + '-' + randLDots.toString();
+
+  fill(randH, sBg, randLBg);
+  noStroke();
+  rect(740, 0, 50, 300)
+
+  fill(randH, sDots, randLDots);
+  noStroke();
+  rect(740, 0, 1, 300)
+
+  fill(randH, sDots, randLDots);
+  noStroke();
+  rect(745, 0, 2, 300)
+
+  fill(randH, sDots, randLDots);
+  noStroke();
+  rect(780, 0, 20, 300)
+
+   translate(850,50);
+  rotate( radians(90) );
+  fill(randH, sDots, randLDots);
+  text(colorText, 10, 90);
+  /*text(dateStr, 20, 90); */
 }
 
 function draw() {
