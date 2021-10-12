@@ -1,6 +1,9 @@
 const dotArr = [];
 let saveFileName;
+let colorText;
 
+/* const saveBtn = document.getElementById('saveBtn');
+const reloadBtn = document.getElementById('reloadBtn'); */
 
 function setup() {
   createCanvas(800, 300);
@@ -11,7 +14,7 @@ function setup() {
   const randLBg = Math.floor(random(10, 90))
   const randLDots = randLBg < 50 ? Math.floor(random(50, 80)) : Math.floor(random(20, 50))
 
-  const colorText = randH.toString() + '-' + sDots.toString() + '-' + randLDots.toString()
+  colorText = randH.toString() + '-' + sDots.toString() + '-' + randLDots.toString()
   let dateStr = new Date;
   dateStr.toString()
   saveFileName = 'punchCardPattern' + '-' + colorText;
@@ -64,8 +67,12 @@ function draw() {
 
 function keyTyped() {
   if (key === 's') {
-    if (window.confirm(`Do you want to save ${saveFileName}.png on your device?`)){
-      saveCanvas(saveFileName, 'png');
-    };
+    saveFile()
   }
+}
+
+function saveFile() {
+  if (window.confirm(`Do you want to save ${saveFileName}.png on your device?`)){
+    saveCanvas(saveFileName, 'png');
+  };
 }

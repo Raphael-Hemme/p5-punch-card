@@ -13,10 +13,19 @@
     <main>
       <script src="sketch.js"></script>
     </main>
+    <div class="btn-container">
+      <div class="btn-inner-container">
+        <button id="saveBtn" type="button" onclick="saveFile();">save</button>
+        <button id="reloadBtn" type="button" onclick="location.reload();">reload</button>
+      </div>
+    </div>
     <div class="shortcut-container">
       <div class="keyboard-shortcuts">
-        <p>Press "s" to save the punchcard</p>
-        <p>Press "f5" to generate a new punchcard</p>
+        <p>If you are using a physical keyboard, you can alternatively press: </p>
+        <ul>
+          <li><span class="key-highlight">s</span> to save the punchcard and</li>
+          <li><span class="key-highlight">f5</span> to generate a new punchcard</li>
+        </ul>
       </div>
     </div>
   </body>
