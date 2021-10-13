@@ -2,12 +2,14 @@ html, body {
   margin: 0;
   padding: 0;
 }
-canvas {
-  display: block;
-}
 
 body {
   width: 100%;
+}
+
+canvas {
+  display: block;
+  /* transform: rotate(270deg) translateX(-130px); */
 }
 
 header, main {
@@ -23,6 +25,14 @@ h1, h3, p, li, span {
   color: rgb(59, 59, 59);
 }
 
+ul {
+  margin: 0;
+}
+
+li, s {
+  margin: 10px 0;
+}
+
 s {
   color: rgb(102, 102, 102)
 }
@@ -31,7 +41,7 @@ s {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding-top: 40px;
+  padding-top: 10px;
 }
 
 .keyboard-shortcuts {
@@ -63,15 +73,35 @@ s {
 .btn-inner-container {
   width: 800px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 button {
-  width: 100px;
-  height: 25px;
+  width: 40%;
+  height: 50px;
+  font-size: 2rem;
   border: none;
+  border-radius: 5px;
   background-color: rgb(59, 59, 59);
   color: rgb(221, 221, 221);
-  border-radius: 5px;
-  margin: 10px
+}
+
+
+
+@media (min-width: 1250px) {
+  .shortcut-container {
+    padding-top: 40px;
+  }
+
+  .btn-inner-container {
+    justify-content: space-around;
+  }
+  
+  button {
+    width: 150px;
+    height: 40px;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    margin: 10px 20px
+  }
 }
